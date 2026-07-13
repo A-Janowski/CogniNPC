@@ -2,7 +2,7 @@ import os
 
 class Settings:
     PROJECT_NAME: str = "CogniNPC Core API"
-    OLLAMA_URL: str = "http://172.25.16.1:11434/api/generate" 
+    OLLAMA_URL: str = "http://172.24.192.1/api/generate" 
     LLM_MODEL_LLama_3_1: str = "llama3.1:latest"
     
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
