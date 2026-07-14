@@ -14,7 +14,6 @@ def setup_logging():
 
     log_path = os.path.join(settings.BASE_DIR, "logs", "cogninpc_{time:YYYY-MM-DD}.log")
     logger.add(
-        sys.stdout,
         log_path,
         level="DEBUG",
         rotation="10 MB",
@@ -22,4 +21,4 @@ def setup_logging():
         format="{level: <8} | {name}:{function}:{line} - {message}"
     )
 
-    logger.info("Logging system (Loguru) has been initialized.")
+    logger.trace("Logging system (Loguru) has been initialized.")

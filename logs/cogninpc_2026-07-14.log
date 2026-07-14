@@ -96,3 +96,5 @@ INFO     | app.api.endpoints:get_npc_memories:33 - Retrieved 6 memories for NPC 
 INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
 INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
 INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+DEBUG    | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.

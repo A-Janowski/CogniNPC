@@ -38,3 +38,35 @@ class ChromaDbService:
                 for m_id, doc, meta in zip(results['ids'], results['documents'], results['metadatas'])
             ]
         }
+    
+    def delete_all_memories(self, npc_id: str) -> int:
+        """
+        Deletes all memories belonging to an NPC.
+        Returns number of deleted memories.
+        """
+        results = self.collection.get(where={"npc_id": npc_id})
+        ids = results.get("ids", [])
+        if not ids:
+            return 0
+        
+        self.collection.delete(ids=ids)
+        return len(ids)
+    
+    def delete_memory(self, npc_id: str, memory_id: str) -> bool:
+        """
+        Deletes a single memory if it belongs to the specified NPC.
+        Returns True if deleted.
+        """
+        results = self.collection.get(
+            ids=[memory_id],
+            include=["metadatas"]
+        )
+        if not results["ids"]:
+            return False
+        
+        metadata = results["metadatas"][0]
+        if metadata["npc_id"] != npc_id:
+            return False
+
+        self.collection.delete(ids=[memory_id])
+        return True
