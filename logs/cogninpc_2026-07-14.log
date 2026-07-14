@@ -1,0 +1,98 @@
+2026-07-14 20:34:21 | INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+2026-07-14 20:35:40 | INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+2026-07-14 20:36:37 | DEBUG    | app.services.npc_service:process_chat:14 - Loading NPC profile for ID: smith_01
+2026-07-14 20:36:37 | DEBUG    | app.services.npc_service:process_chat:18 - Retrieving context for NPC ID: smith_01 with player message: Hey there! Will I find a dragon-scale armour here?
+2026-07-14 20:36:56 | DEBUG    | app.services.npc_service:process_chat:22 - Building system prompt for NPC ID: smith_01
+2026-07-14 20:36:56 | DEBUG    | app.services.npc_service:process_chat:27 - Generating response for NPC ID: smith_01
+2026-07-14 20:37:06 | DEBUG    | app.services.npc_service:process_chat:31 - Saving conversation for NPC ID: smith_01
+2026-07-14 20:37:06 | INFO     | app.services.npc_service:process_chat:35 - Successfully processed chat for smith_01. Memory used: False
+2026-07-14 20:37:06 | INFO     | app.api.endpoints:chat_endpoint:15 - Successfully generated response for smith_01. Memory used: False
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+DEBUG    | app.services.npc_service:process_chat:14 - Loading NPC profile for ID: smith_01
+DEBUG    | app.services.npc_service:process_chat:18 - Retrieving context for NPC ID: smith_01 with player message: Hey there! Will I find a dragon-scale armour here?
+DEBUG    | app.services.npc_service:process_chat:22 - Building system prompt for NPC ID: smith_01
+DEBUG    | app.services.npc_service:process_chat:27 - Generating response for NPC ID: smith_01
+DEBUG    | app.services.npc_service:process_chat:31 - Saving conversation for NPC ID: smith_01
+INFO     | app.services.npc_service:process_chat:35 - Successfully processed chat for smith_01. Memory used: True
+INFO     | app.api.endpoints:chat_endpoint:15 - Successfully generated response for smith_01. Memory used: True
+DEBUG    | app.services.npc_service:process_chat:14 - Loading NPC profile for ID: smith_01
+DEBUG    | app.services.npc_service:process_chat:18 - Retrieving context for NPC ID: smith_01 with player message: Hah! I was just pulling your leg. I am actually looking for a simple steel breastplate, that's all. Name's Adrian by the way, nice meeting ya!
+DEBUG    | app.services.npc_service:process_chat:22 - Building system prompt for NPC ID: smith_01
+DEBUG    | app.services.npc_service:process_chat:27 - Generating response for NPC ID: smith_01
+DEBUG    | app.services.npc_service:process_chat:31 - Saving conversation for NPC ID: smith_01
+INFO     | app.services.npc_service:process_chat:35 - Successfully processed chat for smith_01. Memory used: True
+INFO     | app.api.endpoints:chat_endpoint:15 - Successfully generated response for smith_01. Memory used: True
+DEBUG    | app.services.npc_service:process_chat:14 - Loading NPC profile for ID: smith_01
+DEBUG    | app.services.npc_service:process_chat:18 - Retrieving context for NPC ID: smith_01 with player message: I can spend up to 5 golden coins. I just want a nice and sturdy piece of armour that will be capable of defletcing goblin's fierce attacks.
+DEBUG    | app.services.npc_service:process_chat:22 - Building system prompt for NPC ID: smith_01
+DEBUG    | app.services.npc_service:process_chat:27 - Generating response for NPC ID: smith_01
+DEBUG    | app.services.npc_service:process_chat:31 - Saving conversation for NPC ID: smith_01
+INFO     | app.services.npc_service:process_chat:35 - Successfully processed chat for smith_01. Memory used: True
+INFO     | app.api.endpoints:chat_endpoint:15 - Successfully generated response for smith_01. Memory used: True
+DEBUG    | app.services.npc_service:process_chat:14 - Loading NPC profile for ID: smith_01
+DEBUG    | app.services.npc_service:process_chat:18 - Retrieving context for NPC ID: smith_01 with player message: I need the armour to actually be capable of fighting my way through the dunget at whose end I may find a dragon-scale armour I told you about before!
+DEBUG    | app.services.npc_service:process_chat:22 - Building system prompt for NPC ID: smith_01
+DEBUG    | app.services.npc_service:process_chat:27 - Generating response for NPC ID: smith_01
+DEBUG    | app.services.npc_service:process_chat:31 - Saving conversation for NPC ID: smith_01
+INFO     | app.services.npc_service:process_chat:35 - Successfully processed chat for smith_01. Memory used: True
+INFO     | app.api.endpoints:chat_endpoint:15 - Successfully generated response for smith_01. Memory used: True
+DEBUG    | app.services.npc_service:process_chat:14 - Loading NPC profile for ID: smith_01
+DEBUG    | app.services.npc_service:process_chat:18 - Retrieving context for NPC ID: smith_01 with player message: Do you remember my name and what I came in here looking for?
+DEBUG    | app.services.npc_service:process_chat:22 - Building system prompt for NPC ID: smith_01
+DEBUG    | app.services.npc_service:process_chat:27 - Generating response for NPC ID: smith_01
+DEBUG    | app.services.npc_service:process_chat:31 - Saving conversation for NPC ID: smith_01
+INFO     | app.services.npc_service:process_chat:35 - Successfully processed chat for smith_01. Memory used: True
+INFO     | app.api.endpoints:chat_endpoint:15 - Successfully generated response for smith_01. Memory used: True
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.api.endpoints:get_npc_memories:33 - Retrieved 0 memories for NPC ID: kowal_01
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.api.endpoints:get_npc_memories:37 - Retrieved 6 memories for NPC ID: smith_01
+INFO     | app.api.endpoints:get_npc_memories:37 - Retrieved 0 memories for NPC ID: smith_012
+INFO     | app.api.endpoints:get_npc_memories:37 - Retrieved 0 memories for NPC ID: smith_012
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+ERROR    | app.api.endpoints:get_npc_memories:40 - Error occurred while retrieving memories for smith_012: 'dict' object has no attribute 'count'
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.api.endpoints:get_npc_memories:37 - Retrieved 0 memories for NPC ID: smith_012
+INFO     | app.api.endpoints:get_npc_memories:37 - Retrieved 0 memories for NPC ID: smith_012
+INFO     | app.api.endpoints:get_npc_memories:37 - Retrieved 6 memories for NPC ID: smith_01
+INFO     | app.api.endpoints:get_npc_memories:37 - Retrieved 0 memories for NPC ID: smith_012
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+WARNING  | app.api.endpoints:get_npc_memories:34 - No memories found for NPC ID: smith_012
+ERROR    | app.api.endpoints:get_npc_memories:40 - Error occurred while retrieving memories for smith_012: 
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+WARNING  | app.api.endpoints:get_npc_memories:34 - No memories found for NPC ID: smith_012
+ERROR    | app.api.endpoints:get_npc_memories:40 - Error occurred while retrieving memories for smith_012: 
+WARNING  | app.api.endpoints:get_npc_memories:34 - No memories found for NPC ID: smith_012
+ERROR    | app.api.endpoints:get_npc_memories:40 - Error occurred while retrieving memories for smith_012: 
+WARNING  | app.api.endpoints:get_npc_memories:34 - No memories found for NPC ID: smith_012
+ERROR    | app.api.endpoints:get_npc_memories:40 - Error occurred while retrieving memories for smith_012: 
+INFO     | app.api.endpoints:get_npc_memories:37 - Retrieved 6 memories for NPC ID: smith_01
+WARNING  | app.api.endpoints:get_npc_memories:34 - No memories found for NPC ID: smith_012
+ERROR    | app.api.endpoints:get_npc_memories:40 - Error occurred while retrieving memories for smith_012: 
+INFO     | app.api.endpoints:get_npc_memories:37 - Retrieved 6 memories for NPC ID: smith_01
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.api.endpoints:get_npc_memories:37 - Retrieved 6 memories for NPC ID: smith_01
+WARNING  | app.api.endpoints:get_npc_memories:34 - No memories found for NPC ID: smith_012
+ERROR    | app.api.endpoints:get_npc_memories:40 - Error occurred while retrieving memories for smith_012: 
+WARNING  | app.api.endpoints:get_npc_memories:34 - No memories found for NPC ID: smith_012
+ERROR    | app.api.endpoints:get_npc_memories:40 - Error occurred while retrieving memories for smith_012: 
+WARNING  | app.api.endpoints:get_npc_memories:34 - No memories found for NPC ID: smith_012
+ERROR    | app.api.endpoints:get_npc_memories:40 - Error occurred while retrieving memories for smith_012: 
+WARNING  | app.api.endpoints:get_npc_memories:34 - No memories found for NPC ID: smith_012
+ERROR    | app.api.endpoints:get_npc_memories:40 - Error occurred while retrieving memories for smith_012: 
+WARNING  | app.api.endpoints:get_npc_memories:34 - No memories found for NPC ID: smith_012
+ERROR    | app.api.endpoints:get_npc_memories:40 - Error occurred while retrieving memories for smith_012: 
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.api.endpoints:get_npc_memories:33 - Retrieved 6 memories for NPC ID: smith_01
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.
+INFO     | app.core.logger:setup_logging:24 - Logging system (Loguru) has been initialized.

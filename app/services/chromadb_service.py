@@ -24,3 +24,17 @@ class ChromaDbService:
         if results['documents'] and results['documents'][0]:
             return " ".join(results['documents'][0])
         return ""
+    
+    def get_all_memories(self, npc_id: str) -> dict:
+        """Fetches all memories for a given NPC"""
+        results = self.collection.get(
+            where={"npc_id": npc_id}
+        )
+        return {
+            "npc_id": npc_id,
+            "total_memories": len(results['documents']),
+            "memories": [
+                {"id": m_id, "content": doc, "metadata": meta}
+                for m_id, doc, meta in zip(results['ids'], results['documents'], results['metadatas'])
+            ]
+        }
