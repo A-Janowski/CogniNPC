@@ -13,6 +13,11 @@ class OllamaService:
                 "num_ctx": 2048 # Ograniczenie okna kontekstowego dla oszczędności VRAM
             }
         }
-        response = requests.post(settings.OLLAMA_URL, json=payload)
-        response.raise_for_status()
-        return response.json().get("response", "").strip()
+        try:
+            response = requests.post(settings.OLLAMA_URL, json=payload, timeout=60.0)
+            response.raise_for_status()
+            return response.json().get("response", "").strip()
+        except requests.exceptions.Timeout:
+            return "[Błąd systemu: Model Ollama nie odpowiedział w oczekiwanym czasie (Timeout)]"
+        except requests.exceptions.RequestException as e:
+            return f"[Błąd komunikacji z silnikiem LLM: {str(e)}]"
