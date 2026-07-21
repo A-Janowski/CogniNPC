@@ -18,12 +18,15 @@ async def chat_endpoint(request: ChatRequest):
             response_text=response_text,
             memory_used=used_mem
         )
+    
     except FileNotFoundError as e:
         logger.warning(f"NPC with ID {request.npc_id} not found: {str(e)}")
         raise HTTPException(status_code=404, detail=str(e))
+    
     except Exception as e:
         logger.error(f"Unexpected error occurred for {request.npc_id}: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
+
 
 @router.get("/npcIds", tags=["NPC profiles"])
 async def get_all_npcs():
@@ -34,9 +37,11 @@ async def get_all_npcs():
             "count": len(npc_ids),
             "npc_ids": npc_ids
         }
+    
     except Exception as e:
         logger.error(str(e))
         raise HTTPException(status_code=500, detail=str(e))
+
 
 @router.get("/npcProfiles/{npc_id}", tags=["NPC profiles"])
 async def get_npc(npc_id: str):
@@ -44,23 +49,27 @@ async def get_npc(npc_id: str):
         profile = npc_service.get_npc_profile(npc_id)
         logger.info(f"Successfully retrieved profile for NPC ID: {npc_id}")
         return profile
+    
     except FileNotFoundError:
         logger.warning(f"NPC profile for ID {npc_id} not found.")
         raise HTTPException(status_code=404, detail="NPC not found.")
+    
     except Exception as e:
         logger.error(str(e))
         raise HTTPException(status_code=500, detail=str(e))
 
-#note: Check endpoint construction guidelines for accessing resources in a RESTful manner.
+
 @router.get("/memories/{npc_id}", tags=["Memories"])
 async def get_npc_memories(npc_id: str):
     try:
         memories = memory_service.get_all_memories(npc_id)
         logger.info(f"Retrieved {len(memories['memories'])} memories for NPC ID: {npc_id}")
         return memories
+    
     except Exception as e:
         logger.error(f"Error occurred while retrieving memories for {npc_id}: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
+
 
 @router.post("/injectMemory", tags=["Memories"])
 async def inject_memory(request: MemoryInjectRequest):
@@ -71,9 +80,11 @@ async def inject_memory(request: MemoryInjectRequest):
             "status": "success",
             "message": "Memory saved in ChromaDB."
         }
+    
     except Exception as e:
         logger.error(f"Error occurred while injecting memory for {request.npc_id}: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
+
 
 @router.delete("/memories/{npc_id}", tags=["Memories"])
 async def delete_all_memories(npc_id: str):
@@ -85,10 +96,12 @@ async def delete_all_memories(npc_id: str):
             "npc_id": npc_id,
             "deleted_memories": deleted
         }
+    
     except Exception as e:
         logger.error(f"Error deleting memories for {npc_id}: {e}")
         raise HTTPException(status_code=500, detail=str(e))
     
+
 @router.delete("/memories/{npc_id}/{memory_id}", tags=["Memories"])
 async def delete_memory(npc_id: str, memory_id: str):
     try:
@@ -106,6 +119,7 @@ async def delete_memory(npc_id: str, memory_id: str):
             "npc_id": npc_id,
             "memory_id": memory_id
         }
+    
     except HTTPException:
         raise
     except Exception as e:

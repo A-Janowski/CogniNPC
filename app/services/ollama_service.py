@@ -9,8 +9,8 @@ class OllamaService:
             "prompt": prompt,
             "stream": False,
             "options": {
-                "temperature": 0.7, # Możemy to w przyszłości modyfikować dla szalonych NPC
-                "num_ctx": 2048 # Ograniczenie okna kontekstowego dla oszczędności VRAM
+                "temperature": 0.7,
+                "num_ctx": 2048
             }
         }
         try:
@@ -18,6 +18,6 @@ class OllamaService:
             response.raise_for_status()
             return response.json().get("response", "").strip()
         except requests.exceptions.Timeout:
-            return "[Błąd systemu: Model Ollama nie odpowiedział w oczekiwanym czasie (Timeout)]"
+            return "System error: The request to the LLM engine timed out. Please try again later."
         except requests.exceptions.RequestException as e:
-            return f"[Błąd komunikacji z silnikiem LLM: {str(e)}]"
+            return f"System error: Error communicating with the LLM engine: {str(e)}"
