@@ -15,8 +15,8 @@ def setup_logging():
     log_path = os.path.join(settings.BASE_DIR, "logs", "cogninpc_{time:YYYY-MM-DD}.log")
     logger.add(
         log_path,
-        level="DEBUG",
-        rotation="10 MB",
+        level="TRACE",
+        rotation="100 MB",
         retention="14 days",
         format="{level: <8} | {name}:{function}:{line} - {message}"
     )

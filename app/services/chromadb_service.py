@@ -1,4 +1,6 @@
-import chromadb
+import random
+from typing import Optional
+import chromadb # type: ignore
 from app.core.config import settings
 
 class ChromaDbService:
@@ -70,3 +72,12 @@ class ChromaDbService:
 
         self.collection.delete(ids=[memory_id])
         return True
+
+    def get_random_memory(self, npc_id: str) -> Optional[str]:
+        """Fetches a random memory for a given NPC. Returns None if no memories exist."""
+        results = self.collection.get(
+            where={"npc_id": npc_id}
+        )
+        if results and results['documents']:
+            return random.choice(results['documents'])
+        return None

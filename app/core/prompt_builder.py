@@ -12,7 +12,7 @@ class PromptBuilder:
             return yaml.safe_load(f)
 
     @staticmethod
-    def _map_ocean_to_directives(ocean: dict) -> str:
+    def map_ocean_to_directives(ocean: dict) -> str:
         """
         Translates the Big Five (OCEAN) personality traits (0-100) into 
         precise English behavioral directives using a three-tier mapping.
@@ -93,7 +93,7 @@ class PromptBuilder:
 
         # 2. BEHAVIORAL DIRECTIVES (OCEAN)
         prompt += "BEHAVIORAL STYLE (Strictly adhere to these traits):\n"
-        prompt += PromptBuilder._map_ocean_to_directives(ocean_data)
+        prompt += PromptBuilder.map_ocean_to_directives(ocean_data)
         prompt += "\n\n"
 
         # 3. EPISODIC MEMORY (RAG)
@@ -123,3 +123,81 @@ class PromptBuilder:
         )
 
         return prompt
+
+    @staticmethod
+    def map_ocean_to_gossip_directives(ocean: dict) -> str:
+        directives = []
+
+        o = ocean.get("openness", 50)
+        if o >= 65:
+            directives.append(
+                "You are willing to interpret events creatively and may add "
+                "speculation or unusual possibilities."
+            )
+        elif o <= 35:
+            directives.append(
+                "You are skeptical and conservative. Avoid imaginative or "
+                "unusual interpretations."
+            )
+        else:
+            directives.append(
+                "You interpret information in a practical and balanced way."
+            )
+
+        c = ocean.get("conscientiousness", 50)
+        if c >= 65:
+            directives.append(
+                "Preserve important details accurately and avoid unnecessary distortion."
+            )
+        elif c <= 35:
+            directives.append(
+                "You may omit details, mix information together, or pass it on carelessly."
+            )
+        else:
+            directives.append(
+                "Preserve the main information but allow minor inaccuracies."
+            )
+
+        e = ocean.get("extroversion", 50)
+        if e >= 65:
+            directives.append(
+                "Present the information enthusiastically and with expressive wording."
+            )
+        elif e <= 35:
+            directives.append(
+                "Share the information reluctantly and in a restrained manner."
+            )
+        else:
+            directives.append(
+                "Present the information in a natural and balanced manner."
+            )
+
+        a = ocean.get("agreeableness", 50)
+        if a >= 65:
+            directives.append(
+                "Avoid malicious interpretations and present uncertainty gently."
+            )
+        elif a <= 35:
+            directives.append(
+                "You may frame the information with suspicion, criticism, or cynicism."
+            )
+        else:
+            directives.append(
+                "Maintain a neutral but assertive interpretation."
+            )
+
+        n = ocean.get("neuroticism", 50)
+        if n >= 65:
+            directives.append(
+                "Emphasize possible danger, risk, or uncertainty."
+            )
+        elif n <= 35:
+            directives.append(
+                "Remain calm and avoid dramatic exaggeration."
+            )
+        else:
+            directives.append(
+                "Express concern only when it is supported by the information."
+            )
+
+        return "\n".join(f"- {directive}" for directive in directives)

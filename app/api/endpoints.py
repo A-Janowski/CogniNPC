@@ -1,6 +1,6 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException  # type: ignore[reportMissingImports]
 from loguru import logger
-from app.models.schemas import ChatRequest, ChatResponse, MemoryInjectRequest
+from app.models.schemas import ChatRequest, ChatResponse, GossipRequest, MemoryInjectRequest
 from app.services.npc_service import NPCService
 from app.services.chromadb_service import ChromaDbService
 
@@ -125,4 +125,20 @@ async def delete_memory(npc_id: str, memory_id: str):
     except Exception as e:
         logger.error(f"Error deleting memory {memory_id}: {e}")
         raise HTTPException(status_code=500, detail=str(e))
-    
+
+@router.post("/gossip", tags=["Gossip system"])
+async def gossip_endpoint(request: GossipRequest):
+    try:
+        success, result_text = npc_service.process_gossip(request.npc_source, request.npc_target)
+        if not success:
+            return {"status": "ignored", "message": result_text}
+        
+        return {
+            "status": "success", 
+            "npc_source": request.npc_source,
+            "npc_target": request.npc_target,
+            "mutated_gossip": result_text
+        }
+    except Exception as e:
+        logger.error(f"Error processing gossip from {request.npc_source} to {request.npc_target}: {e}")
+        raise HTTPException(status_code=500, detail=str(e))

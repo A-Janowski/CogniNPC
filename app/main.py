@@ -1,3 +1,4 @@
+# pyright: reportMissingImports=false
 from fastapi import FastAPI
 from app.api.endpoints import router
 from app.core.config import settings

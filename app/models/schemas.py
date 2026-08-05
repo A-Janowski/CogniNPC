@@ -14,3 +14,7 @@ class MemoryInjectRequest(BaseModel):
     npc_id: str
     fact: str
     source: str = Field(default="observation", description="np. 'gossip', 'direct_interaction'")
+
+class GossipRequest(BaseModel):
+    npc_source: str
+    npc_target: str
