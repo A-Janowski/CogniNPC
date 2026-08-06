@@ -1,3 +1,4 @@
+import datetime
 import random
 from typing import Optional
 import chromadb # type: ignore
@@ -13,7 +14,12 @@ class ChromaDbService:
         mem_id = str(uuid.uuid4())
         self.collection.add(
             documents=[fact],
-            metadatas=[{"npc_id": npc_id, "source": source}],
+            metadatas=
+                [{
+                    "npc_id": npc_id,
+                    "source": source,
+                    "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat()
+                }],
             ids=[mem_id]
         )
 

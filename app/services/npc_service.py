@@ -62,7 +62,7 @@ class NPCService:
         logger.trace(f"Source NPC '{npc_source}' memory retrieved for gossip: {source_memory}")
         source_profile = self.prompt_builder.load_npc_profile(npc_source)
         mutation_prompt = (
-            self.prompt_builder.build_gossip_mutation_prompt( # type: ignore
+            self.build_gossip_mutation_prompt(
                 source_profile,
                 source_memory
             )
