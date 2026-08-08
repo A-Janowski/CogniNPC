@@ -13,7 +13,7 @@ class NPCService:
         self.prompt_builder = PromptBuilder()
         self.profile_dir = Path(settings.DATA_DIR) / "npc_profiles"
 
-    def process_chat(self, npc_id: str, player_message: str) -> tuple[str, bool]:
+    def process_chat(self, npc_id: str, player_message: str) -> tuple[str, bool, dict[str, object]]:
         # 1. Loading NPC profile
         logger.debug(f"Loading NPC profile for ID: {npc_id}")
         profile = self.prompt_builder.load_npc_profile(npc_id)
@@ -29,7 +29,8 @@ class NPCService:
         
         # 4. Inference
         logger.debug(f"Generating response for NPC ID: {npc_id}")
-        response_text = self.llm.generate(full_prompt)
+        llm_result = self.llm.generate(full_prompt)
+        response_text = llm_result.get("response_text", "")
         
         # 5. (Optional) Save the current conversation to memory for future use
         logger.debug(f"Saving conversation for NPC ID: {npc_id}")
@@ -38,7 +39,7 @@ class NPCService:
         used_memory = len(context) > 0
         logger.info(f"Successfully processed chat for {npc_id}. Memory used: {used_memory}")
 
-        return response_text, used_memory
+        return response_text, used_memory, llm_result
     
     def get_all_npc_ids(self):
         return sorted([
@@ -68,7 +69,8 @@ class NPCService:
             )
         )
 
-        gossip_text = self.llm.generate(mutation_prompt)
+        llm_result = self.llm.generate(mutation_prompt)
+        gossip_text = llm_result.get("response_text", "")
         self.memory.add_memory(
             npc_target,
             gossip_text,

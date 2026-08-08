@@ -11,12 +11,13 @@ memory_service = ChromaDbService()
 @router.post("/chat", response_model=ChatResponse, tags=["Chat"])
 async def chat_endpoint(request: ChatRequest):
     try:
-        response_text, used_mem = npc_service.process_chat(request.npc_id, request.player_message)
+        response_text, used_mem, metrics = npc_service.process_chat(request.npc_id, request.player_message)
         logger.info(f"Successfully generated response for {request.npc_id}. Memory used: {used_mem}")
         return ChatResponse(
             npc_id=request.npc_id,
             response_text=response_text,
-            memory_used=used_mem
+            memory_used=used_mem,
+            metrics=metrics
         )
     
     except FileNotFoundError as e:
