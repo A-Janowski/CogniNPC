@@ -10,3 +10,5 @@ ENV/
 data/chromadb_data/
 logs/
 *.log
+ipynb_checkpoints/
+tests/*.csv

@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  cogninpc-api:
+    build: .
+    container_name: cogninpc_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
+    environment:
+      - OLLAMA_URL=http://ollama-service:11434/api/generate
+      - WATCHFILES_FORCE_POLLING=true
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    depends_on:
+      - ollama-service
+
+  ollama-service:
+    image: ollama/ollama:latest
+    container_name: cogninpc_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+volumes:
+  ollama_models:
