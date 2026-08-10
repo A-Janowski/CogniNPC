@@ -1,5 +1,7 @@
 import datetime
 import random
+import time
+import uuid
 from typing import Optional
 import chromadb # type: ignore
 from app.core.config import settings
@@ -23,15 +25,25 @@ class ChromaDbService:
             ids=[mem_id]
         )
 
-    def retrieve_context(self, npc_id: str, query: str, limit: int = 2) -> str:
+    def retrieve_context(self, npc_id: str, query: str, limit: int = 2) -> tuple[str, dict]:
+        if limit <= 0:
+            return "", {"stage_rag_ms": 0.0, "rag_k_returned": 0}
+ 
+        t0 = time.perf_counter()
         results = self.collection.query(
             query_texts=[query],
             n_results=limit,
-            where={"npc_id": npc_id}
+            where={"npc_id": npc_id},
         )
-        if results['documents'] and results['documents'][0]:
-            return " ".join(results['documents'][0])
-        return ""
+        rag_ms = (time.perf_counter() - t0) * 1000
+ 
+        docs = results["documents"][0] if results["documents"] else []
+        context = " ".join(docs)
+ 
+        return context, {
+            "stage_rag_ms": round(rag_ms, 3),
+            "rag_k_returned": len(docs),
+        }
     
     def get_all_memories(self, npc_id: str) -> dict:
         """Fetches all memories for a given NPC"""

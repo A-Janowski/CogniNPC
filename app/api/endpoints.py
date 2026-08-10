@@ -9,10 +9,18 @@ npc_service = NPCService()
 memory_service = ChromaDbService()
 
 @router.post("/chat", response_model=ChatResponse, tags=["Chat"])
-async def chat_endpoint(request: ChatRequest):
+def chat_endpoint(request: ChatRequest):
     try:
-        response_text, used_mem, metrics = npc_service.process_chat(request.npc_id, request.player_message)
+        response_text, used_mem, metrics = npc_service.process_chat(
+            request.npc_id,
+            request.player_message,
+            model=request.model,
+            rag_k=request.rag_k,
+            num_predict=request.num_predict,
+            skip_memory_write=request.skip_memory_write
+        )
         logger.info(f"Successfully generated response for {request.npc_id}. Memory used: {used_mem}")
+
         return ChatResponse(
             npc_id=request.npc_id,
             response_text=response_text,
