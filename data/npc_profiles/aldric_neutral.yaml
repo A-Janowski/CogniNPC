@@ -1,0 +1,13 @@
+id: aldric_01
+name: Aldric
+profession: Traveling Merchant
+backstory: >
+  A merchant who travels between settlements trading various goods. Has seen many places
+  and met many people over the years.
+quirks: []
+ocean:
+  openness: 50
+  conscientiousness: 50
+  extraversion: 50
+  agreeableness: 50
+  neuroticism: 50

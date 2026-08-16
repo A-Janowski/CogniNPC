@@ -17,7 +17,9 @@ def chat_endpoint(request: ChatRequest):
             model=request.model,
             rag_k=request.rag_k,
             num_predict=request.num_predict,
-            skip_memory_write=request.skip_memory_write
+            skip_memory_write=request.skip_memory_write,
+            ocean_mode=request.ocean_mode,
+            ocean_override=request.ocean_override
         )
         logger.info(f"Successfully generated response for {request.npc_id}. Memory used: {used_mem}")
 

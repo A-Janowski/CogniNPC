@@ -67,11 +67,19 @@ class PromptBuilder:
         return "\n".join([f"- {d}" for d in directives])
 
     @staticmethod
-    def build_system_prompt(profile: dict, retrieved_memory: str) -> str:
+    def build_system_prompt(profile: dict, retrieved_memory: str, ocean_mode: str = "full") -> str:
         """
         Assembles the final English System Prompt sent to the LLM.
         Includes safety guards to prevent default AI assistant patterns.
+
+        ocean_mode:
+          "full" — three-level mapping (PromptBuilder.
+                   map_ocean_to_directives) — CURRENT behavior,
+                   default, so that the Unity client doesn't notice any changes.
+          "raw"  — PromptBuilder.format_ocean_raw — raw numbers.
+          "none" — section completely omitted.
         """
+
         name = profile.get('name', 'Stranger')
         profession = profile.get('profession', 'None')
         backstory = profile.get('backstory', '')
@@ -92,9 +100,17 @@ class PromptBuilder:
             prompt += "\n".join([f"- {q}" for q in quirks]) + "\n\n"
 
         # 2. BEHAVIORAL DIRECTIVES (OCEAN)
-        prompt += "BEHAVIORAL STYLE (Strictly adhere to these traits):\n"
-        prompt += PromptBuilder.map_ocean_to_directives(ocean_data)
-        prompt += "\n\n"
+        if ocean_mode == "full":
+            prompt += "BEHAVIORAL STYLE (Strictly adhere to these traits):\n"
+            prompt += PromptBuilder.map_ocean_to_directives(ocean_data)
+            prompt += "\n\n"
+        elif ocean_mode == "raw":
+            prompt += PromptBuilder.format_ocean_raw(ocean_data)
+            prompt += "\n\n"
+        elif ocean_mode == "none":
+            pass  # C0: brak jakiejkolwiek informacji o osobowosci
+        else:
+            raise ValueError(f"Nieznany ocean_mode: {ocean_mode!r}")
 
         # 3. EPISODIC MEMORY (RAG)
         if retrieved_memory:
@@ -201,3 +217,32 @@ class PromptBuilder:
             )
 
         return "\n".join(f"- {directive}" for directive in directives)
+
+    @staticmethod
+    def format_ocean_raw(ocean_data: dict) -> str:
+        """Warunek C1: surowe liczby bez interpretacji behawioralnej.
+ 
+        Celowo NIE tlumaczymy wartosci na jezyk naturalny ani nie sugerujemy
+        modelowi, jak je zastosowac — to jest punkt odniesienia pokazujacy,
+        ile daje SAMA obecnosc trojstopniowego mapowania (C2) ponad prosta
+        injekcje liczb.
+        """
+        labels = {
+            "openness": "Openness",
+            "conscientiousness": "Conscientiousness",
+            "extroversion": "Extraversion",
+            "agreeableness": "Agreeableness",
+            "neuroticism": "Neuroticism",
+        }
+        lines = [
+            f"{labels.get(k, k)}: {v:.2f}"
+            for k, v in ocean_data.items()
+            if k in labels
+        ]
+        return (
+            "PERSONALITY PROFILE (Big Five / OCEAN model, scale 0-100):\n"
+            + "\n".join(lines)
+        )
+
+
+    

@@ -24,14 +24,22 @@ class NPCService:
         rag_k: int | None = None,
         num_predict: int | None = None,
         skip_memory_write: bool = False,
+        ocean_mode: str = "full",
+        ocean_override: dict[str, float] | None = None
     ) -> tuple[str, bool, dict[str, object]]:
         
+        # Begin timing the entire orchestration process 
+        # (including RAG, prompt building, and LLM inference)
         t_start = time.perf_counter()
+
         effective_k = DEFAULT_RAG_K if rag_k is None else rag_k
         
         # 1. Loading NPC profile
         logger.debug(f"Loading NPC profile for ID: {npc_id}")
         profile = self.prompt_builder.load_npc_profile(npc_id)
+        if ocean_override is not None:
+            profile = dict(profile)
+            profile["ocean"] = dict(ocean_override)
         
         # 2. Searching for relevant context in memory (RAG)
         logger.debug(f"Retrieving context for NPC ID: {npc_id} with player message: {player_message}, limit: {effective_k}")
@@ -42,7 +50,9 @@ class NPCService:
         # 3. Building the prompt
         logger.debug(f"Building system prompt for NPC ID: {npc_id}")
         t_prompt0 = time.perf_counter()
-        system_prompt = self.prompt_builder.build_system_prompt(profile, context)
+        system_prompt = self.prompt_builder.build_system_prompt(
+            profile, context, ocean_mode=ocean_mode
+        )
         full_prompt = f"{system_prompt}\n\nPlayer: {player_message}\nYou:"
         prompt_build_ms = (time.perf_counter() - t_prompt0) * 1000
         
@@ -61,6 +71,7 @@ class NPCService:
             )
 
         used_memory = len(context) > 0
+        # Total time taken for the entire orchestration process
         total_wall_ms = (time.perf_counter() - t_start) * 1000
         logger.info(f"Successfully processed chat for {npc_id}. Memory used: {used_memory}. Total time: {total_wall_ms:.2f} ms")
 
@@ -78,6 +89,7 @@ class NPCService:
         metrics["orchestration_ms"] = round(total_wall_ms - ollama_total_ms, 3)
         metrics["wall_total_ms"] = round(total_wall_ms, 3)
         metrics["rag_k_requested"] = effective_k
+        metrics["ocean_mode"] = ocean_mode
  
         return response_text, used_memory, metrics
     
