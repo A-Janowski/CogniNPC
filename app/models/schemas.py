@@ -1,10 +1,12 @@
+from typing import Literal
+
 from pydantic import BaseModel, Field
 
 class ChatRequest(BaseModel):
     npc_id: str
     player_message: str
  
-    # --- benchmark fields (optional) ---
+    # --- benchmark fields for Test nr 1 (performance) ---
     model: str | None = Field(
         default=None,
         description="Nadpisuje domyślny model Ollamy dla tego żądania."
@@ -26,6 +28,15 @@ class ChatRequest(BaseModel):
                     "samej, kontrolowanej puli wspomnień NPC — bez tego pula rośnie "
                     "monotonicznie w trakcie serii i wyniki dla rag_k=20 na końcu "
                     "przebiegu przestają być porównywalne z rag_k=20 na początku."
+    )
+
+    # --- benchmark fields for Test nr 2 (ocean ablation) ---
+    ocean_mode: Literal["full", "raw", "none"] = "full"
+    ocean_override: dict[str, float] | None = Field(
+        default=None,
+        description="Nadpisuje wektor OCEAN z profilu (np. "
+                    "{'openness':0.5,'conscientiousness':0.5,'extraversion':0.5,"
+                    "'agreeableness':0.5,'neuroticism':0.85}). None = uzyj profilu."
     )
 class ChatResponse(BaseModel):
     npc_id: str

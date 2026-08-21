@@ -67,11 +67,19 @@ class PromptBuilder:
         return "\n".join([f"- {d}" for d in directives])
 
     @staticmethod
-    def build_system_prompt(profile: dict, retrieved_memory: str) -> str:
+    def build_system_prompt(profile: dict, retrieved_memory: str, ocean_mode: str = "full") -> str:
         """
         Assembles the final English System Prompt sent to the LLM.
         Includes safety guards to prevent default AI assistant patterns.
+
+        ocean_mode:
+          "full" — three-level mapping (PromptBuilder.
+                   map_ocean_to_directives) — CURRENT behavior,
+                   default, so that the Unity client doesn't notice any changes.
+          "raw"  — PromptBuilder.format_ocean_raw — raw numbers.
+          "none" — section completely omitted.
         """
+
         name = profile.get('name', 'Stranger')
         profession = profile.get('profession', 'None')
         backstory = profile.get('backstory', '')
@@ -86,17 +94,25 @@ class PromptBuilder:
             f"Your backstory and lore:\n{backstory}\n\n"
         )
 
-        # 1b. UNIQUE QUIRKS
+        # 2. UNIQUE QUIRKS
         if quirks:
             prompt += "PERSONAL QUIRKS AND SPEECH PATTERNS:\n"
             prompt += "\n".join([f"- {q}" for q in quirks]) + "\n\n"
 
-        # 2. BEHAVIORAL DIRECTIVES (OCEAN)
-        prompt += "BEHAVIORAL STYLE (Strictly adhere to these traits):\n"
-        prompt += PromptBuilder.map_ocean_to_directives(ocean_data)
-        prompt += "\n\n"
+        # 3. BEHAVIORAL DIRECTIVES (OCEAN)
+        if ocean_mode == "full":
+            prompt += "BEHAVIORAL STYLE (Strictly adhere to these traits):\n"
+            prompt += PromptBuilder.map_ocean_to_directives(ocean_data)
+            prompt += "\n\n"
+        elif ocean_mode == "raw":
+            prompt += PromptBuilder.format_ocean_raw(ocean_data)
+            prompt += "\n\n"
+        elif ocean_mode == "none":
+            pass  # C0: brak jakiejkolwiek informacji o osobowosci
+        else:
+            raise ValueError(f"Nieznany ocean_mode: {ocean_mode!r}")
 
-        # 3. EPISODIC MEMORY (RAG)
+        # 4. EPISODIC MEMORY (RAG)
         if retrieved_memory:
             prompt += (
                 "[INTERNAL MEMORY - PAST FACTS AND KNOWLEDGE]:\n"
@@ -105,7 +121,7 @@ class PromptBuilder:
                 "or if they naturally fit the conversation. Do not recite them artificially.\n\n"
             )
 
-        # 4. LANGUAGE SAFETY GUARD (Strict roleplaying boundaries)
+        # 5. LANGUAGE SAFETY GUARD (Strict roleplaying boundaries)
         prompt += (
             "ROLEPLAYING AND STYLE GUIDELINES:\n"
             "- Your language must fit a classic fantasy setting. Avoid modern slang or terminology.\n"
@@ -114,7 +130,7 @@ class PromptBuilder:
             "- Keep your answers concise and dynamic, optimized for an in-game dialogue box (maximum 3-4 sentences, unless extroversion dictates otherwise).\n\n"
         )
 
-        # 5. ABSOLUTE SYSTEM RULES (Fourth wall protection)
+        # 6. ABSOLUTE SYSTEM RULES (Fourth wall protection)
         prompt += (
             "ABSOLUTNE SYSTEM RULES:\n"
             "1. NEVER admit that you are an AI, a language model, or a software system.\n"
@@ -201,3 +217,77 @@ class PromptBuilder:
             )
 
         return "\n".join(f"- {directive}" for directive in directives)
+
+    @staticmethod
+    def build_gossip_mutation_prompt(source_profile: dict, source_memory: str) -> str:
+        name = source_profile.get("name", "Unknown")
+        profession = source_profile.get("profession", "Unknown")
+        ocean = source_profile.get("ocean", {})
+
+        personality = PromptBuilder.map_ocean_to_gossip_directives(ocean)
+
+        return f"""
+            You simulate how an NPC passes information to another NPC in a fantasy RPG.
+
+            SOURCE NPC:
+            Name: {name}
+            Profession: {profession}
+
+            PERSONALITY:
+            {personality}
+
+            TASK:
+            Transform the memory below into a short piece of information that this NPC
+            might pass to another person.
+
+            The NPC's personality must influence:
+            - how confidently the information is presented,
+            - whether details are preserved or distorted,
+            - how much uncertainty or exaggeration is added,
+            - the tone and wording of the statement.
+
+            RULES:
+            1. Preserve the core subject and main event.
+            2. Do not invent completely unrelated people, places, events, or motives.
+            3. Add only a small and believable amount of uncertainty, exaggeration,
+            suspicion, or distortion.
+            4. Do not claim that the information is certainly true unless the original
+            memory explicitly confirms it.
+            5. Keep the result to exactly one sentence.
+            6. Use language appropriate for a classic fantasy setting.
+            7. Return only the transformed rumor, without explanations, labels, or quotation marks.
+
+            MEMORY:
+            {source_memory}
+
+            TRANSMITTED INFORMATION:
+            """.strip()
+
+    @staticmethod
+    def format_ocean_raw(ocean_data: dict) -> str:
+        """Warunek C1: surowe liczby bez interpretacji behawioralnej.
+ 
+        Celowo NIE tlumaczymy wartosci na jezyk naturalny ani nie sugerujemy
+        modelowi, jak je zastosowac — to jest punkt odniesienia pokazujacy,
+        ile daje SAMA obecnosc trojstopniowego mapowania (C2) ponad prosta
+        injekcje liczb.
+        """
+        labels = {
+            "openness": "Openness",
+            "conscientiousness": "Conscientiousness",
+            "extroversion": "Extraversion",
+            "agreeableness": "Agreeableness",
+            "neuroticism": "Neuroticism",
+        }
+        lines = [
+            f"{labels.get(k, k)}: {v:.2f}"
+            for k, v in ocean_data.items()
+            if k in labels
+        ]
+        return (
+            "PERSONALITY PROFILE (Big Five / OCEAN model, scale 0-100):\n"
+            + "\n".join(lines)
+        )
+
+
+    

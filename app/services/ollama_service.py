@@ -14,8 +14,8 @@ class OllamaService:
             # backend nie odróżnia wtedy "zimnego startu" od stanu ustalonego.
             "keep_alive": "30m",
             "options": {
-                "temperature": 0.7,
-                "num_ctx": 2048,
+                "temperature": 0.8, # Default: 0.8 as per https://github.com/ollama/ollama/blob/main/docs/modelfile.mdx#valid-parameters-and-values
+                "num_ctx": 2048,    # Default: 2048 as per https://github.com/ollama/ollama/blob/main/docs/modelfile.mdx#valid-parameters-and-values
                 **({"num_predict": num_predict} if num_predict is not None else {}),
             },
         }
