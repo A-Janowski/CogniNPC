@@ -264,6 +264,7 @@ class PromptBuilder:
             """.strip()
 
     @staticmethod
+
     def format_ocean_raw(ocean_data: dict) -> str:
         """Warunek C1: surowe liczby bez interpretacji behawioralnej.
  
