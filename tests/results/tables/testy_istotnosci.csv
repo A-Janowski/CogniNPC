@@ -1,0 +1,8 @@
+efekt,test,statystyka,df,p,wielkosc_efektu,interpretacja,n
+k -> TTFT (N=1),Kruskal-Wallis,26.14,4,2.97e-05,eps^2 = 0.153,duza,150
+k -> TTFT (monotonicznosc),Spearman,-0.412,-,1.67e-07,rho = -0.412,umiarkowana,150
+k -> dlugosc promptu,Spearman,0.981,-,6.39e-107,rho = 0.981,duza,150
+N -> czas calkowity (k=5),Kruskal-Wallis,81.17,2,2.36e-18,eps^2 = 0.382,duza,210
+N=1 vs N=2 (czas calkowity),Mann-Whitney U,230.0,-,1.00e-08,r_rb = 0.744,duza,90
+N=1 vs N=4 (czas calkowity),Mann-Whitney U,167.0,-,1.72e-14,r_rb = 0.907,duza,150
+N -> narzut orkiestracji (kontrolny),Kruskal-Wallis,67.66,2,2.03e-15,eps^2 = 0.317,duza,210

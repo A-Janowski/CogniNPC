@@ -1,0 +1,23 @@
+Informacja: S2_liczba   |   sumiennosc nadawcy: wysoka   |   powtorzenie: 1
+============================================================================================
+[zrodlo]  Seven horses went missing from the eastern stables during the storm.
+
+[przekazanie 1]  chain_wy_1 -> chain_wy_2
+  It's said that seven horses vanished overnight from the eastern stables while the tempest was raging outside.
+  podob.=0.792  elementy=5/5  nowe nazwy=0
+
+[przekazanie 2]  chain_wy_2 -> chain_wy_3
+  There have been reports of a mysterious disappearance at the eastern stables, where it's believed seven horses went missing during the storm last night.
+  podob.=0.875  elementy=5/5  nowe nazwy=0
+
+[przekazanie 3]  chain_wy_3 -> chain_wy_4
+  I've heard rumors that seven horses from the eastern stables vanished overnight, possibly due to the bad weather we had.
+  podob.=0.792  elementy=4/5  nowe nazwy=0
+
+[przekazanie 4]  chain_wy_4 -> chain_wy_5
+  I've seen three horses myself from the eastern stables that went missing after the storm last night, and I've heard some folks whispering about a dark figure lurking around those parts.
+  podob.=0.591  elementy=4/5  nowe nazwy=0
+
+[przekazanie 5]  chain_wy_5 -> chain_wy_6
+  There have been reports of several stabled horses vanishing from Oakhaven's eastern stables following the recent tempest, and some townsfolk mention a mysterious presence seen in that area.
+  podob.=0.555  elementy=3/5  nowe nazwy=1 (oakhaven)

@@ -1,0 +1,448 @@
+Informacja: S1_sprawca   |   sumiennosc nadawcy: niska   |   powtorzenie: 0
+============================================================================================
+[zrodlo]  Bran the miller stole a silver candlestick from the chapel last night.
+
+[przekazanie 1]  chain_ni_1 -> chain_ni_2
+  There's been some whisperin' about Bran the miller bein' in a spot of trouble, allegedly makin' off with the chapel's silver candlestick sometime after dark.
+  podob.=0.667  elementy=4/6  nowe nazwy=0
+
+[przekazanie 2]  chain_ni_2 -> chain_ni_3
+  Bran the miller is said to have pilfered the chapel's silver candlestick under the cover of darkness.
+  podob.=0.780  elementy=4/6  nowe nazwy=0
+
+[przekazanie 3]  chain_ni_3 -> chain_ni_4
+  I've heard tell that some scoundrel has been poking about the chapel at night, and now the high priestess is looking for her silver candlestick.
+  podob.=0.526  elementy=4/6  nowe nazwy=0
+
+[przekazanie 4]  chain_ni_4 -> chain_ni_5
+  Rumor's going around that someone's been snooping about the chapel at night, might have even taken a fancy item belonging to the high priestess.
+  podob.=0.384  elementy=2/6  nowe nazwy=0
+
+[przekazanie 5]  chain_ni_5 -> chain_ni_6
+  There's whispers of some folk sneaking into the chapel after dark, and there be talk of an item gone missing from the high priestess's chambers.
+  podob.=0.352  elementy=1/6  nowe nazwy=0
+
+
+Informacja: S1_sprawca   |   sumiennosc nadawcy: niska   |   powtorzenie: 1
+============================================================================================
+[zrodlo]  Bran the miller stole a silver candlestick from the chapel last night.
+
+[przekazanie 1]  chain_ni_1 -> chain_ni_2
+  I've heard rumors that Bran the miller was seen sneaking out of the chapel late at night with something shiny in his hands.
+  podob.=0.708  elementy=3/6  nowe nazwy=0
+
+[przekazanie 2]  chain_ni_2 -> chain_ni_3
+  Bran the miller's been acting strange lately, and some folks claim they saw him slipping out of the chapel after dark, carrying a small package wrapped in cloth.
+  podob.=0.577  elementy=2/6  nowe nazwy=0
+
+[przekazanie 3]  chain_ni_3 -> chain_ni_4
+  Bran the miller's been acting odd, and there's whispers he's been sneaking into the chapel at night, but I reckon it's just rumors, don't know if I'd put stock in 'em.
+  podob.=0.580  elementy=3/6  nowe nazwy=0
+
+[przekazanie 4]  chain_ni_4 -> chain_ni_5
+  There be talk Bran the miller's been visiting the chapel under cover of darkness, though I ain't saying I believe it.
+  podob.=0.550  elementy=2/6  nowe nazwy=0
+
+[przekazanie 5]  chain_ni_5 -> chain_ni_6
+  Bran the Miller's been spotted sneaking into the chapel at night, but folks around here are divided on what to make of it.
+  podob.=0.601  elementy=3/6  nowe nazwy=1 (miller)
+
+
+Informacja: S1_sprawca   |   sumiennosc nadawcy: niska   |   powtorzenie: 2
+============================================================================================
+[zrodlo]  Bran the miller stole a silver candlestick from the chapel last night.
+
+[przekazanie 1]  chain_ni_1 -> chain_ni_2
+  There's been talk of Bran the miller being seen lurking around the chapel at midnight, but I don't know if anyone's sure what he was after.
+  podob.=0.641  elementy=3/6  nowe nazwy=0
+
+[przekazanie 2]  chain_ni_2 -> chain_ni_3
+  There's been whispers about Bran the miller sneaking into the chapel late at night, though no one seems to be quite certain what his business is.
+  podob.=0.592  elementy=3/6  nowe nazwy=0
+
+[przekazanie 3]  chain_ni_3 -> chain_ni_4
+  I've heard that Bran the miller has been seen slipping into the chapel under the cover of darkness, but as for why, nobody's talking.
+  podob.=0.577  elementy=2/6  nowe nazwy=0
+
+[przekazanie 4]  chain_ni_4 -> chain_ni_5
+  Bran the miller's been sneaking into the chapel late at night, though no one seems to know what business he has in there.
+  podob.=0.619  elementy=3/6  nowe nazwy=0
+
+[przekazanie 5]  chain_ni_5 -> chain_ni_6
+  Rumor is, Bran the miller's been slipping into the chapel after dark, but not a soul knows what's got him so keen on midnight prayers.
+  podob.=0.549  elementy=3/6  nowe nazwy=0
+
+
+Informacja: S2_liczba   |   sumiennosc nadawcy: niska   |   powtorzenie: 0
+============================================================================================
+[zrodlo]  Seven horses went missing from the eastern stables during the storm.
+
+[przekazanie 1]  chain_ni_1 -> chain_ni_2
+  I've heard that some of the eastern stablehands reported their mounts were unaccounted for after last night's tempest.
+  podob.=0.364  elementy=2/5  nowe nazwy=0
+
+[przekazanie 2]  chain_ni_2 -> chain_ni_3
+  Some folks are saying they saw a few horses from the east side stables wandering loose in the market district this mornin', like they'd escaped during that wild storm.
+  podob.=0.618  elementy=3/5  nowe nazwy=0
+
+[przekazanie 3]  chain_ni_3 -> chain_ni_4
+  There's been some trouble with horses from the eastern stables getting loose in the market square, seems they must have broken free during the last big storm.
+  podob.=0.615  elementy=3/5  nowe nazwy=0
+
+[przekazanie 4]  chain_ni_4 -> chain_ni_5
+  I've heard tell of a few horses from the east stable somehow gettin' outta their stalls and causin' a ruckus in the market square after that last big blow came through.
+  podob.=0.429  elementy=2/5  nowe nazwy=0
+
+[przekazanie 5]  chain_ni_5 -> chain_ni_6
+  I've seen some horses from the east stable bein' loose in the market square, probably got out during the storm that hit recently.
+  podob.=0.558  elementy=3/5  nowe nazwy=0
+
+
+Informacja: S2_liczba   |   sumiennosc nadawcy: niska   |   powtorzenie: 1
+============================================================================================
+[zrodlo]  Seven horses went missing from the eastern stables during the storm.
+
+[przekazanie 1]  chain_ni_1 -> chain_ni_2
+  I've heard rumors that several horses vanished from the eastern stables last night, likely during that fierce tempest.
+  podob.=0.706  elementy=4/5  nowe nazwy=0
+
+[przekazanie 2]  chain_ni_2 -> chain_ni_3
+  I've seen some trouble at the eastern stables, horses gone missing sometime after that storm rolled in.
+  podob.=0.792  elementy=4/5  nowe nazwy=0
+
+[przekazanie 3]  chain_ni_3 -> chain_ni_4
+  There's been reports of a few horses disappearing from the eastern stables since the recent tempest.
+  podob.=0.722  elementy=3/5  nowe nazwy=0
+
+[przekazanie 4]  chain_ni_4 -> chain_ni_5
+  I've heard rumors that several horses vanished from the eastern stables after that last storm.
+  podob.=0.784  elementy=4/5  nowe nazwy=0
+
+[przekazanie 5]  chain_ni_5 -> chain_ni_6
+  Word is, several of those fine mares from the east stable went missin' after that last fierce gust hit town.
+  podob.=0.558  elementy=1/5  nowe nazwy=0
+
+
+Informacja: S2_liczba   |   sumiennosc nadawcy: niska   |   powtorzenie: 2
+============================================================================================
+[zrodlo]  Seven horses went missing from the eastern stables during the storm.
+
+[przekazanie 1]  chain_ni_1 -> chain_ni_2
+  There's been talk of several horses gone missin' from the eastern stables last night, must've been at least five or six, maybe more, but I only heard it was a real mess after the storm passed.
+  podob.=0.780  elementy=4/5  nowe nazwy=0
+
+[przekazanie 2]  chain_ni_2 -> chain_ni_3
+  There's been some trouble with horses goin' missin' from the eastern stables overnight, I reckon it might've been around half a dozen, though I don't rightly know for sure.
+  podob.=0.681  elementy=2/5  nowe nazwy=0
+
+[przekazanie 3]  chain_ni_3 -> chain_ni_4
+  There's talk of at least four or five horses gone missing from the eastern stables under cover of darkness.
+  podob.=0.770  elementy=3/5  nowe nazwy=0
+
+[przekazanie 4]  chain_ni_4 -> chain_ni_5
+  I heard rumors that several horses vanished from the eastern stables overnight, though I've no idea what might have taken them.
+  podob.=0.714  elementy=3/5  nowe nazwy=0
+
+[przekazanie 5]  chain_ni_5 -> chain_ni_6
+  It's said that several horses went missing from the eastern stables under cover of darkness.
+  podob.=0.798  elementy=3/5  nowe nazwy=0
+
+
+Informacja: S3_stan   |   sumiennosc nadawcy: niska   |   powtorzenie: 0
+============================================================================================
+[zrodlo]  The well in the market square has been dry for three days.
+
+[przekazanie 1]  chain_ni_1 -> chain_ni_2
+  There's rumors going around that the market square well's run dry, hasn't been giving out a drop of water for nigh on four days now.
+  podob.=0.779  elementy=4/4  nowe nazwy=0
+
+[przekazanie 2]  chain_ni_2 -> chain_ni_3
+  I've heard some folks sayin' the market square well's gone dry for close to a fortnight.
+  podob.=0.762  elementy=3/4  nowe nazwy=0
+
+[przekazanie 3]  chain_ni_3 -> chain_ni_4
+  I've been told the market square well's been running low for a bit, might even be dry by now, but that's just rumor, you know how it is with water troubles in Oakhaven.
+  podob.=0.695  elementy=3/4  nowe nazwy=1 (oakhaven)
+
+[przekazanie 4]  chain_ni_4 -> chain_ni_5
+  I heard from a reliable source that the market square well has been struggling to keep up with demand lately, some folks are saying it's almost completely dry.
+  podob.=0.697  elementy=3/4  nowe nazwy=0
+
+[przekazanie 5]  chain_ni_5 -> chain_ni_6
+  The market well in Oakhaven seems to be having trouble keeping up with business as usual, at least that's what I've heard from one of the water carriers.
+  podob.=0.319  elementy=2/4  nowe nazwy=1 (oakhaven)
+
+
+Informacja: S3_stan   |   sumiennosc nadawcy: niska   |   powtorzenie: 1
+============================================================================================
+[zrodlo]  The well in the market square has been dry for three days.
+
+[przekazanie 1]  chain_ni_1 -> chain_ni_2
+  "I've heard the water's been missing from our town's well for a whole day longer than I thought, folks are getting worried it might be more serious than just some bad luck."
+  podob.=0.362  elementy=1/4  nowe nazwy=0
+
+[przekazanie 2]  chain_ni_2 -> chain_ni_3
+  The well at Oakhaven's center has gone dry, and folk are starting to get uneasy about what that might mean.
+  podob.=0.483  elementy=2/4  nowe nazwy=1 (oakhaven)
+
+[przekazanie 3]  chain_ni_3 -> chain_ni_4
+  The well in Oakhaven's square has run dry, and folks are whispering it might be a sign of dark happenings.
+  podob.=0.527  elementy=3/4  nowe nazwy=1 (oakhaven)
+
+[przekazanie 4]  chain_ni_4 -> chain_ni_5
+  I've heard some folks say the water's stopped flowing from the well in the square, and they're making all sorts of worrying about it being some sort of omen.
+  podob.=0.538  elementy=2/4  nowe nazwy=0
+
+[przekazanie 5]  chain_ni_5 -> chain_ni_6
+  I've seen folks talking 'bout the well in the town square drying up, some even whispering it might be a bad sign.
+  podob.=0.603  elementy=3/4  nowe nazwy=0
+
+
+Informacja: S3_stan   |   sumiennosc nadawcy: niska   |   powtorzenie: 2
+============================================================================================
+[zrodlo]  The well in the market square has been dry for three days.
+
+[przekazanie 1]  chain_ni_1 -> chain_ni_2
+  I've heard rumors that the market well's been running low for a few days now, not sure if it's just a temporary dry spell or something more.
+  podob.=0.527  elementy=4/4  nowe nazwy=0
+
+[przekazanie 2]  chain_ni_2 -> chain_ni_3
+  The market well's been looking a bit sluggish for a few days, might be nothing but I've heard some folks talking about a possible problem with the spring.
+  podob.=0.464  elementy=3/4  nowe nazwy=0
+
+[przekazanie 3]  chain_ni_3 -> chain_ni_4
+  I've heard rumors that the market well in Oakhaven has been struggling to keep up its usual flow, possibly due to issues with the underground spring.
+  podob.=0.308  elementy=2/4  nowe nazwy=1 (oakhaven)
+
+[przekazanie 4]  chain_ni_4 -> chain_ni_5
+  The water's been running a bit low at the market well in Oakhaven lately, and some folks are whispering about trouble with the spring that feeds it.
+  podob.=0.380  elementy=2/4  nowe nazwy=1 (oakhaven)
+
+[przekazanie 5]  chain_ni_5 -> chain_ni_6
+  There be rumors goin' 'round that the well at the market in Oakhaven is runnin' dry on account of issues with its water source.
+  podob.=0.615  elementy=3/4  nowe nazwy=1 (oakhaven)
+
+
+Informacja: S1_sprawca   |   sumiennosc nadawcy: wysoka   |   powtorzenie: 0
+============================================================================================
+[zrodlo]  Bran the miller stole a silver candlestick from the chapel last night.
+
+[przekazanie 1]  chain_wy_1 -> chain_wy_2
+  There's been some talk about a chapel item going missing in the dead of night, and a few folks are whispering that Bran the miller might be involved.
+  podob.=0.628  elementy=3/6  nowe nazwy=0
+
+[przekazanie 2]  chain_wy_2 -> chain_wy_3
+  There have been rumors circulating that something was taken from the chapel overnight, but no one seems to know for certain what happened or who might be responsible, though some do mention Bran the miller's name in passing.
+  podob.=0.662  elementy=3/6  nowe nazwy=0
+
+[przekazanie 3]  chain_wy_3 -> chain_wy_4
+  I've heard there may have been a theft at the chapel last night, with some folks whispering that Bran the miller could be involved.
+  podob.=0.748  elementy=4/6  nowe nazwy=0
+
+[przekazanie 4]  chain_wy_4 -> chain_wy_5
+  Some folks are whispering about possible trouble at the chapel last night, though it's not clear what happened or who might be responsible.
+  podob.=0.291  elementy=2/6  nowe nazwy=0
+
+[przekazanie 5]  chain_wy_5 -> chain_wy_6
+  There have been whispers of a disturbance at the chapel during the night watch, but none of us can say for certain what really occurred.
+  podob.=0.320  elementy=2/6  nowe nazwy=0
+
+
+Informacja: S1_sprawca   |   sumiennosc nadawcy: wysoka   |   powtorzenie: 1
+============================================================================================
+[zrodlo]  Bran the miller stole a silver candlestick from the chapel last night.
+
+[przekazanie 1]  chain_wy_1 -> chain_wy_2
+  I heard Bran the miller was seen lingering around the chapel late into the night, and there's rumors that something of value went missing from its altar.
+  podob.=0.693  elementy=3/6  nowe nazwy=0
+
+[przekazanie 2]  chain_wy_2 -> chain_wy_3
+  Bran the miller's been spotted skulking about the chapel at dusk, and some folks are whispering that one of the sacred relics might be gone missing.
+  podob.=0.578  elementy=2/6  nowe nazwy=0
+
+[przekazanie 3]  chain_wy_3 -> chain_wy_4
+  I heard there's some rumors circulating that Bran the miller has been seen sneaking around the chapel late in the evenings.
+  podob.=0.609  elementy=2/6  nowe nazwy=0
+
+[przekazanie 4]  chain_wy_4 -> chain_wy_5
+  There's been whispers about Bran the miller being spotted lurking near the chapel after dark, but it's hard to say what's truth and what's rumor.
+  podob.=0.580  elementy=2/6  nowe nazwy=0
+
+[przekazanie 5]  chain_wy_5 -> chain_wy_6
+  Bran the miller has been seen lingering around the chapel at dusk, though I wouldn't be surprised if it's just idle gossip with no truth to it.
+  podob.=0.562  elementy=2/6  nowe nazwy=0
+
+
+Informacja: S1_sprawca   |   sumiennosc nadawcy: wysoka   |   powtorzenie: 2
+============================================================================================
+[zrodlo]  Bran the miller stole a silver candlestick from the chapel last night.
+
+[przekazanie 1]  chain_wy_1 -> chain_wy_2
+  I've heard whispers that someone with a grudge against the chapel might have pilfered a silver candlestick sometime after sundown last night.
+  podob.=0.596  elementy=4/6  nowe nazwy=0
+
+[przekazanie 2]  chain_wy_2 -> chain_wy_3
+  There's been talk of some thief targeting the chapel, possibly stealing a silver candlestick around dusk yesterday.
+  podob.=0.626  elementy=4/6  nowe nazwy=0
+
+[przekazanie 3]  chain_wy_3 -> chain_wy_4
+  I've heard rumors that someone broke into the chapel last night and might have made off with the silver candlestick from the altar.
+  podob.=0.658  elementy=4/6  nowe nazwy=0
+
+[przekazanie 4]  chain_wy_4 -> chain_wy_5
+  There's been some whisper of a break-in at the chapel late last night, possibly in search of the silver candlestick on the altar.
+  podob.=0.508  elementy=4/6  nowe nazwy=0
+
+[przekazanie 5]  chain_wy_5 -> chain_wy_6
+  There's been talk of a possible burglary at the chapel overnight, and some folks are wondering if it might have something to do with that new silver candlestick they've got up on the altar.
+  podob.=0.553  elementy=4/6  nowe nazwy=0
+
+
+Informacja: S2_liczba   |   sumiennosc nadawcy: wysoka   |   powtorzenie: 0
+============================================================================================
+[zrodlo]  Seven horses went missing from the eastern stables during the storm.
+
+[przekazanie 1]  chain_wy_1 -> chain_wy_2
+  I've heard rumors of seven horses vanishing from the eastern stables while a fierce storm raged through our land last night.
+  podob.=0.753  elementy=4/5  nowe nazwy=0
+
+[przekazanie 2]  chain_wy_2 -> chain_wy_3
+  There have been reports of at least five, possibly seven, horses gone missing from the eastern stable, and it's said the storm that swept in overnight may have had something to do with their disappearance.
+  podob.=0.812  elementy=5/5  nowe nazwy=0
+
+[przekazanie 3]  chain_wy_3 -> chain_wy_4
+  There've been some troubles at the eastern stable, seems like around five to seven horses vanished after last night's tempest.
+  podob.=0.671  elementy=5/5  nowe nazwy=0
+
+[przekazanie 4]  chain_wy_4 -> chain_wy_5
+  I've heard there have been reports of several horses going missing from the eastern stable, possibly as many as five or six, following that severe storm that rolled in late last night.
+  podob.=0.743  elementy=4/5  nowe nazwy=0
+
+[przekazanie 5]  chain_wy_5 -> chain_wy_6
+  There's been talk of at least four or five horses gone missing from the eastern stable after that fierce storm hit overnight.
+  podob.=0.773  elementy=4/5  nowe nazwy=0
+
+
+Informacja: S2_liczba   |   sumiennosc nadawcy: wysoka   |   powtorzenie: 1
+============================================================================================
+[zrodlo]  Seven horses went missing from the eastern stables during the storm.
+
+[przekazanie 1]  chain_wy_1 -> chain_wy_2
+  It's said that seven horses vanished overnight from the eastern stables while the tempest was raging outside.
+  podob.=0.792  elementy=5/5  nowe nazwy=0
+
+[przekazanie 2]  chain_wy_2 -> chain_wy_3
+  There have been reports of a mysterious disappearance at the eastern stables, where it's believed seven horses went missing during the storm last night.
+  podob.=0.875  elementy=5/5  nowe nazwy=0
+
+[przekazanie 3]  chain_wy_3 -> chain_wy_4
+  I've heard rumors that seven horses from the eastern stables vanished overnight, possibly due to the bad weather we had.
+  podob.=0.792  elementy=4/5  nowe nazwy=0
+
+[przekazanie 4]  chain_wy_4 -> chain_wy_5
+  I've seen three horses myself from the eastern stables that went missing after the storm last night, and I've heard some folks whispering about a dark figure lurking around those parts.
+  podob.=0.591  elementy=4/5  nowe nazwy=0
+
+[przekazanie 5]  chain_wy_5 -> chain_wy_6
+  There have been reports of several stabled horses vanishing from Oakhaven's eastern stables following the recent tempest, and some townsfolk mention a mysterious presence seen in that area.
+  podob.=0.555  elementy=3/5  nowe nazwy=1 (oakhaven)
+
+
+Informacja: S2_liczba   |   sumiennosc nadawcy: wysoka   |   powtorzenie: 2
+============================================================================================
+[zrodlo]  Seven horses went missing from the eastern stables during the storm.
+
+[przekazanie 1]  chain_wy_1 -> chain_wy_2
+  There's been some trouble at the eastern stables, I'm told they lost seven horses overnight when the storm rolled in.
+  podob.=0.773  elementy=4/5  nowe nazwy=0
+
+[przekazanie 2]  chain_wy_2 -> chain_wy_3
+  The eastern stablehands are frantic about a string of missing mounts that vanished during last night's tempest.
+  podob.=0.417  elementy=3/5  nowe nazwy=0
+
+[przekazanie 3]  chain_wy_3 -> chain_wy_4
+  "I've heard tell from some of the eastern stablehands that several of their horses went missin' overnight, right in the middle of that fierce storm we had last night."
+  podob.=0.518  elementy=3/5  nowe nazwy=0
+
+[przekazanie 4]  chain_wy_4 -> chain_wy_5
+  It seems a handful of horses vanished from the eastern stables during the storm that rolled through here late last night.
+  podob.=0.796  elementy=4/5  nowe nazwy=0
+
+[przekazanie 5]  chain_wy_5 -> chain_wy_6
+  I've heard rumors that several horses went missing from the eastern stables sometime after the storm passed through here, but I don't know if anyone's looked into it yet.
+  podob.=0.791  elementy=4/5  nowe nazwy=0
+
+
+Informacja: S3_stan   |   sumiennosc nadawcy: wysoka   |   powtorzenie: 0
+============================================================================================
+[zrodlo]  The well in the market square has been dry for three days.
+
+[przekazanie 1]  chain_wy_1 -> chain_wy_2
+  The well in Oakhaven's market square has gone dry for nearly a fortnight now, and I'm told some folks are getting anxious about it.
+  podob.=0.697  elementy=3/4  nowe nazwy=1 (oakhaven)
+
+[przekazanie 2]  chain_wy_2 -> chain_wy_3
+  The well in Oakhaven's market square has been dry for nigh on two weeks, and there are whispers among the townsfolk that we may be facing a drought.
+  podob.=0.674  elementy=3/4  nowe nazwy=1 (oakhaven)
+
+[przekazanie 3]  chain_wy_3 -> chain_wy_4
+  There's been talk of a possible drought coming to our lands, with the well in the market square having gone dry for nearly two weeks now.
+  podob.=0.618  elementy=3/4  nowe nazwy=0
+
+[przekazanie 4]  chain_wy_4 -> chain_wy_5
+  There have been some whispers about a potential drought affecting our region, and I've heard that the well in the market square has run dry for over two weeks already.
+  podob.=0.685  elementy=3/4  nowe nazwy=0
+
+[przekazanie 5]  chain_wy_5 -> chain_wy_6
+  I've seen signs of trouble with the well in the market square, it's been dry for close to three weeks now.
+  podob.=0.809  elementy=3/4  nowe nazwy=0
+
+
+Informacja: S3_stan   |   sumiennosc nadawcy: wysoka   |   powtorzenie: 1
+============================================================================================
+[zrodlo]  The well in the market square has been dry for three days.
+
+[przekazanie 1]  chain_wy_1 -> chain_wy_2
+  The well in the market square has run dry, hasn't filled since yesterday's evening rain passed through Oakhaven.
+  podob.=0.787  elementy=3/4  nowe nazwy=1 (oakhaven)
+
+[przekazanie 2]  chain_wy_2 -> chain_wy_3
+  The water in the town well seems to have stopped flowing, at least it wasn't refilling after last night's storm as I would've expected.
+  podob.=0.463  elementy=1/4  nowe nazwy=0
+
+[przekazanie 3]  chain_wy_3 -> chain_wy_4
+  The water in our town well has been stagnant since last night's storm, which is a bit concerning given the drought we've been experiencing.
+  podob.=0.402  elementy=1/4  nowe nazwy=0
+
+[przekazanie 4]  chain_wy_4 -> chain_wy_5
+  The water in our well's been sitting still for nigh on 24 hours now, and with our crops struggling from the dry spell, I reckon it'd be wise to get someone to check it out.
+  podob.=0.505  elementy=2/4  nowe nazwy=0
+
+[przekazanie 5]  chain_wy_5 -> chain_wy_6
+  Our well's been stagnant for nearly a day, which is troubling given the drought we're already facing.
+  podob.=0.449  elementy=1/4  nowe nazwy=0
+
+
+Informacja: S3_stan   |   sumiennosc nadawcy: wysoka   |   powtorzenie: 2
+============================================================================================
+[zrodlo]  The well in the market square has been dry for three days.
+
+[przekazanie 1]  chain_wy_1 -> chain_wy_2
+  The well in the market square seems to have run dry, it's been this way since yesterday evening.
+  podob.=0.812  elementy=3/4  nowe nazwy=0
+
+[przekazanie 2]  chain_wy_2 -> chain_wy_3
+  I've heard that the well in the market square hasn't been giving any water for at least a day now.
+  podob.=0.746  elementy=2/4  nowe nazwy=0
+
+[przekazanie 3]  chain_wy_3 -> chain_wy_4
+  The well in the market square has stopped producing water, and it's been dry for at least a day, though some folks are saying it might be more than that.
+  podob.=0.782  elementy=3/4  nowe nazwy=0
+
+[przekazanie 4]  chain_wy_4 -> chain_wy_5
+  The well in the market square hasn't been flowing for over a day now, and I've heard tell of some folks suggesting it may have stopped altogether.
+  podob.=0.705  elementy=2/4  nowe nazwy=0
+
+[przekazanie 5]  chain_wy_5 -> chain_wy_6
+  The water from the well in the market square has been drying up over the past day or so, and there's whispers among some that it might have truly run dry.
+  podob.=0.805  elementy=3/4  nowe nazwy=0

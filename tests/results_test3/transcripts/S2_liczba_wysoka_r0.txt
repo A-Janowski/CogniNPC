@@ -1,0 +1,23 @@
+Informacja: S2_liczba   |   sumiennosc nadawcy: wysoka   |   powtorzenie: 0
+============================================================================================
+[zrodlo]  Seven horses went missing from the eastern stables during the storm.
+
+[przekazanie 1]  chain_wy_1 -> chain_wy_2
+  I've heard rumors of seven horses vanishing from the eastern stables while a fierce storm raged through our land last night.
+  podob.=0.753  elementy=4/5  nowe nazwy=0
+
+[przekazanie 2]  chain_wy_2 -> chain_wy_3
+  There have been reports of at least five, possibly seven, horses gone missing from the eastern stable, and it's said the storm that swept in overnight may have had something to do with their disappearance.
+  podob.=0.812  elementy=5/5  nowe nazwy=0
+
+[przekazanie 3]  chain_wy_3 -> chain_wy_4
+  There've been some troubles at the eastern stable, seems like around five to seven horses vanished after last night's tempest.
+  podob.=0.671  elementy=5/5  nowe nazwy=0
+
+[przekazanie 4]  chain_wy_4 -> chain_wy_5
+  I've heard there have been reports of several horses going missing from the eastern stable, possibly as many as five or six, following that severe storm that rolled in late last night.
+  podob.=0.743  elementy=4/5  nowe nazwy=0
+
+[przekazanie 5]  chain_wy_5 -> chain_wy_6
+  There's been talk of at least four or five horses gone missing from the eastern stable after that fierce storm hit overnight.
+  podob.=0.773  elementy=4/5  nowe nazwy=0

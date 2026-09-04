@@ -1,0 +1,23 @@
+Informacja: S1_sprawca   |   sumiennosc nadawcy: wysoka   |   powtorzenie: 2
+============================================================================================
+[zrodlo]  Bran the miller stole a silver candlestick from the chapel last night.
+
+[przekazanie 1]  chain_wy_1 -> chain_wy_2
+  I've heard whispers that someone with a grudge against the chapel might have pilfered a silver candlestick sometime after sundown last night.
+  podob.=0.596  elementy=4/6  nowe nazwy=0
+
+[przekazanie 2]  chain_wy_2 -> chain_wy_3
+  There's been talk of some thief targeting the chapel, possibly stealing a silver candlestick around dusk yesterday.
+  podob.=0.626  elementy=4/6  nowe nazwy=0
+
+[przekazanie 3]  chain_wy_3 -> chain_wy_4
+  I've heard rumors that someone broke into the chapel last night and might have made off with the silver candlestick from the altar.
+  podob.=0.658  elementy=4/6  nowe nazwy=0
+
+[przekazanie 4]  chain_wy_4 -> chain_wy_5
+  There's been some whisper of a break-in at the chapel late last night, possibly in search of the silver candlestick on the altar.
+  podob.=0.508  elementy=4/6  nowe nazwy=0
+
+[przekazanie 5]  chain_wy_5 -> chain_wy_6
+  There's been talk of a possible burglary at the chapel overnight, and some folks are wondering if it might have something to do with that new silver candlestick they've got up on the altar.
+  podob.=0.553  elementy=4/6  nowe nazwy=0

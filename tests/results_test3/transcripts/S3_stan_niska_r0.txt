@@ -1,0 +1,23 @@
+Informacja: S3_stan   |   sumiennosc nadawcy: niska   |   powtorzenie: 0
+============================================================================================
+[zrodlo]  The well in the market square has been dry for three days.
+
+[przekazanie 1]  chain_ni_1 -> chain_ni_2
+  There's rumors going around that the market square well's run dry, hasn't been giving out a drop of water for nigh on four days now.
+  podob.=0.779  elementy=4/4  nowe nazwy=0
+
+[przekazanie 2]  chain_ni_2 -> chain_ni_3
+  I've heard some folks sayin' the market square well's gone dry for close to a fortnight.
+  podob.=0.762  elementy=3/4  nowe nazwy=0
+
+[przekazanie 3]  chain_ni_3 -> chain_ni_4
+  I've been told the market square well's been running low for a bit, might even be dry by now, but that's just rumor, you know how it is with water troubles in Oakhaven.
+  podob.=0.695  elementy=3/4  nowe nazwy=1 (oakhaven)
+
+[przekazanie 4]  chain_ni_4 -> chain_ni_5
+  I heard from a reliable source that the market square well has been struggling to keep up with demand lately, some folks are saying it's almost completely dry.
+  podob.=0.697  elementy=3/4  nowe nazwy=0
+
+[przekazanie 5]  chain_ni_5 -> chain_ni_6
+  The market well in Oakhaven seems to be having trouble keeping up with business as usual, at least that's what I've heard from one of the water carriers.
+  podob.=0.319  elementy=2/4  nowe nazwy=1 (oakhaven)

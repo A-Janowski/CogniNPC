@@ -1,0 +1,23 @@
+Informacja: S3_stan   |   sumiennosc nadawcy: niska   |   powtorzenie: 1
+============================================================================================
+[zrodlo]  The well in the market square has been dry for three days.
+
+[przekazanie 1]  chain_ni_1 -> chain_ni_2
+  "I've heard the water's been missing from our town's well for a whole day longer than I thought, folks are getting worried it might be more serious than just some bad luck."
+  podob.=0.362  elementy=1/4  nowe nazwy=0
+
+[przekazanie 2]  chain_ni_2 -> chain_ni_3
+  The well at Oakhaven's center has gone dry, and folk are starting to get uneasy about what that might mean.
+  podob.=0.483  elementy=2/4  nowe nazwy=1 (oakhaven)
+
+[przekazanie 3]  chain_ni_3 -> chain_ni_4
+  The well in Oakhaven's square has run dry, and folks are whispering it might be a sign of dark happenings.
+  podob.=0.527  elementy=3/4  nowe nazwy=1 (oakhaven)
+
+[przekazanie 4]  chain_ni_4 -> chain_ni_5
+  I've heard some folks say the water's stopped flowing from the well in the square, and they're making all sorts of worrying about it being some sort of omen.
+  podob.=0.538  elementy=2/4  nowe nazwy=0
+
+[przekazanie 5]  chain_ni_5 -> chain_ni_6
+  I've seen folks talking 'bout the well in the town square drying up, some even whispering it might be a bad sign.
+  podob.=0.603  elementy=3/4  nowe nazwy=0

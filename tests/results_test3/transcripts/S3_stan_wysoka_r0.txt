@@ -1,0 +1,23 @@
+Informacja: S3_stan   |   sumiennosc nadawcy: wysoka   |   powtorzenie: 0
+============================================================================================
+[zrodlo]  The well in the market square has been dry for three days.
+
+[przekazanie 1]  chain_wy_1 -> chain_wy_2
+  The well in Oakhaven's market square has gone dry for nearly a fortnight now, and I'm told some folks are getting anxious about it.
+  podob.=0.697  elementy=3/4  nowe nazwy=1 (oakhaven)
+
+[przekazanie 2]  chain_wy_2 -> chain_wy_3
+  The well in Oakhaven's market square has been dry for nigh on two weeks, and there are whispers among the townsfolk that we may be facing a drought.
+  podob.=0.674  elementy=3/4  nowe nazwy=1 (oakhaven)
+
+[przekazanie 3]  chain_wy_3 -> chain_wy_4
+  There's been talk of a possible drought coming to our lands, with the well in the market square having gone dry for nearly two weeks now.
+  podob.=0.618  elementy=3/4  nowe nazwy=0
+
+[przekazanie 4]  chain_wy_4 -> chain_wy_5
+  There have been some whispers about a potential drought affecting our region, and I've heard that the well in the market square has run dry for over two weeks already.
+  podob.=0.685  elementy=3/4  nowe nazwy=0
+
+[przekazanie 5]  chain_wy_5 -> chain_wy_6
+  I've seen signs of trouble with the well in the market square, it's been dry for close to three weeks now.
+  podob.=0.809  elementy=3/4  nowe nazwy=0

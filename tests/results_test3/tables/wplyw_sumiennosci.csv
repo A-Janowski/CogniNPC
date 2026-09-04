@@ -1,0 +1,13 @@
+metryka,zakres,mediana_niska,mediana_wysoka,U,p,r_rb,n,p_BH,istotny_BH
+Podobienstwo do zrodla,wszystkie przekazania,0.601,0.671,767.0,0.048,0.242,90,0.4923,False
+Podobienstwo do zrodla,przekazanie 5,0.558,0.562,33.0,0.5365,0.185,18,0.7153,False
+Udzial zachowanych elementow,wszystkie przekazania,0.6,0.667,808.5,0.0971,0.201,90,0.4923,False
+Udzial zachowanych elementow,przekazanie 5,0.5,0.667,28.0,0.2843,0.309,18,0.4923,False
+Nowe nazwy wlasne,wszystkie przekazania,0.0,0.0,1102.5,0.22,-0.089,90,0.4923,False
+Nowe nazwy wlasne,przekazanie 5,0.0,0.0,49.5,0.298,-0.222,18,0.4923,False
+Wskazniki przypuszczenia,wszystkie przekazania,0.0,1.0,972.0,0.7171,0.04,90,0.7823,False
+Wskazniki przypuszczenia,przekazanie 5,1.0,0.0,54.0,0.1747,-0.333,18,0.4923,False
+Wskazniki wzmocnienia,wszystkie przekazania,0.0,0.0,1035.0,0.3282,-0.022,90,0.4923,False
+Wskazniki wzmocnienia,przekazanie 5,0.0,0.0,40.5,1.0,0.0,18,1.0,False
+Dlugosc wypowiedzi,wszystkie przekazania,25.0,24.0,947.0,0.5992,0.065,90,0.719,False
+Dlugosc wypowiedzi,przekazanie 5,23.0,27.0,25.0,0.1837,0.383,18,0.4923,False

@@ -1,0 +1,9 @@
+cecha,metryka,H,eps2,rho,n,p (BH),interpretacja
+Otwartosc,Zróżnicowanie leksykalne (Guiraud),12.31,0.119,0.36,90,0.0076,umiarkowana
+Otwartosc,Średnia długość słowa,6.31,0.05,0.255,90,0.1119,mala
+Sumiennosc,Średnia długość zdania,4.05,0.024,0.211,90,0.2604,mala
+Ekstrawersja,Długość [tokeny],35.17,0.381,0.629,90,3.84e-07,duza
+Ekstrawersja,Długość [słowa],37.08,0.403,0.645,90,2.22e-07,duza
+Ugodowosc,Wskaźniki uprzejmości,1.11,-0.01,0.058,90,0.6928,mala
+Ugodowosc,Wskaźniki wrogości,2.67,0.008,-0.04,90,0.4388,mala
+Neurotycznosc,Wskaźniki wahania,74.68,0.835,0.802,90,3.03e-15,duza

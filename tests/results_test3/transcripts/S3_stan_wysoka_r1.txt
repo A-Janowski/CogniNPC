@@ -1,0 +1,23 @@
+Informacja: S3_stan   |   sumiennosc nadawcy: wysoka   |   powtorzenie: 1
+============================================================================================
+[zrodlo]  The well in the market square has been dry for three days.
+
+[przekazanie 1]  chain_wy_1 -> chain_wy_2
+  The well in the market square has run dry, hasn't filled since yesterday's evening rain passed through Oakhaven.
+  podob.=0.787  elementy=3/4  nowe nazwy=1 (oakhaven)
+
+[przekazanie 2]  chain_wy_2 -> chain_wy_3
+  The water in the town well seems to have stopped flowing, at least it wasn't refilling after last night's storm as I would've expected.
+  podob.=0.463  elementy=1/4  nowe nazwy=0
+
+[przekazanie 3]  chain_wy_3 -> chain_wy_4
+  The water in our town well has been stagnant since last night's storm, which is a bit concerning given the drought we've been experiencing.
+  podob.=0.402  elementy=1/4  nowe nazwy=0
+
+[przekazanie 4]  chain_wy_4 -> chain_wy_5
+  The water in our well's been sitting still for nigh on 24 hours now, and with our crops struggling from the dry spell, I reckon it'd be wise to get someone to check it out.
+  podob.=0.505  elementy=2/4  nowe nazwy=0
+
+[przekazanie 5]  chain_wy_5 -> chain_wy_6
+  Our well's been stagnant for nearly a day, which is troubling given the drought we're already facing.
+  podob.=0.449  elementy=1/4  nowe nazwy=0

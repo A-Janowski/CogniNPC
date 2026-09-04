@@ -1,0 +1,23 @@
+Informacja: S1_sprawca   |   sumiennosc nadawcy: wysoka   |   powtorzenie: 0
+============================================================================================
+[zrodlo]  Bran the miller stole a silver candlestick from the chapel last night.
+
+[przekazanie 1]  chain_wy_1 -> chain_wy_2
+  There's been some talk about a chapel item going missing in the dead of night, and a few folks are whispering that Bran the miller might be involved.
+  podob.=0.628  elementy=3/6  nowe nazwy=0
+
+[przekazanie 2]  chain_wy_2 -> chain_wy_3
+  There have been rumors circulating that something was taken from the chapel overnight, but no one seems to know for certain what happened or who might be responsible, though some do mention Bran the miller's name in passing.
+  podob.=0.662  elementy=3/6  nowe nazwy=0
+
+[przekazanie 3]  chain_wy_3 -> chain_wy_4
+  I've heard there may have been a theft at the chapel last night, with some folks whispering that Bran the miller could be involved.
+  podob.=0.748  elementy=4/6  nowe nazwy=0
+
+[przekazanie 4]  chain_wy_4 -> chain_wy_5
+  Some folks are whispering about possible trouble at the chapel last night, though it's not clear what happened or who might be responsible.
+  podob.=0.291  elementy=2/6  nowe nazwy=0
+
+[przekazanie 5]  chain_wy_5 -> chain_wy_6
+  There have been whispers of a disturbance at the chapel during the night watch, but none of us can say for certain what really occurred.
+  podob.=0.320  elementy=2/6  nowe nazwy=0

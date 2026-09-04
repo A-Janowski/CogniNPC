@@ -1,0 +1,23 @@
+Informacja: S1_sprawca   |   sumiennosc nadawcy: niska   |   powtorzenie: 2
+============================================================================================
+[zrodlo]  Bran the miller stole a silver candlestick from the chapel last night.
+
+[przekazanie 1]  chain_ni_1 -> chain_ni_2
+  There's been talk of Bran the miller being seen lurking around the chapel at midnight, but I don't know if anyone's sure what he was after.
+  podob.=0.641  elementy=3/6  nowe nazwy=0
+
+[przekazanie 2]  chain_ni_2 -> chain_ni_3
+  There's been whispers about Bran the miller sneaking into the chapel late at night, though no one seems to be quite certain what his business is.
+  podob.=0.592  elementy=3/6  nowe nazwy=0
+
+[przekazanie 3]  chain_ni_3 -> chain_ni_4
+  I've heard that Bran the miller has been seen slipping into the chapel under the cover of darkness, but as for why, nobody's talking.
+  podob.=0.577  elementy=2/6  nowe nazwy=0
+
+[przekazanie 4]  chain_ni_4 -> chain_ni_5
+  Bran the miller's been sneaking into the chapel late at night, though no one seems to know what business he has in there.
+  podob.=0.619  elementy=3/6  nowe nazwy=0
+
+[przekazanie 5]  chain_ni_5 -> chain_ni_6
+  Rumor is, Bran the miller's been slipping into the chapel after dark, but not a soul knows what's got him so keen on midnight prayers.
+  podob.=0.549  elementy=3/6  nowe nazwy=0

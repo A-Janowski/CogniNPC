@@ -1,0 +1,21 @@
+metryka,porownanie,test,stat,p,efekt,n,p_BH,istotny_BH
+Długość [tokeny],C0 / C1 / C2,Kruskal-Wallis,53.45,2.48e-12,0.591,90,2.48e-11,True
+Długość [tokeny],C1 wobec C2,Mann-Whitney U,49.5,3.32e-09,0.89,60,1.11e-08,True
+Długość [słowa],C0 / C1 / C2,Kruskal-Wallis,47.36,5.21e-11,0.521,90,2.60e-10,True
+Długość [słowa],C1 wobec C2,Mann-Whitney U,68.0,1.68e-08,0.849,60,4.79e-08,True
+Liczba zdań,C0 / C1 / C2,Kruskal-Wallis,25.28,3.23e-06,0.268,90,7.18e-06,True
+Liczba zdań,C1 wobec C2,Mann-Whitney U,191.5,9.78e-05,0.574,60,1.96e-04,True
+Średnia długość zdania,C0 / C1 / C2,Kruskal-Wallis,5.49,0.0642,0.04,90,0.0988,False
+Średnia długość zdania,C1 wobec C2,Mann-Whitney U,388.5,0.367,0.137,60,0.4587,False
+Zróżnicowanie leksykalne (Guiraud),C0 / C1 / C2,Kruskal-Wallis,40.5,1.61e-09,0.443,90,6.42e-09,True
+Zróżnicowanie leksykalne (Guiraud),C1 wobec C2,Mann-Whitney U,94.5,1.53e-07,0.79,60,3.83e-07,True
+Średnia długość słowa,C0 / C1 / C2,Kruskal-Wallis,10.3,0.0058,0.095,90,0.0105,True
+Średnia długość słowa,C1 wobec C2,Mann-Whitney U,310.0,0.0392,0.311,60,0.0653,False
+Wskaźniki wahania,C0 / C1 / C2,Kruskal-Wallis,66.54,3.56e-15,0.742,90,7.13e-14,True
+Wskaźniki wahania,C1 wobec C2,Mann-Whitney U,8.0,1.22e-11,0.982,60,8.11e-11,True
+Wskaźniki uprzejmości,C0 / C1 / C2,Kruskal-Wallis,1.73,0.4209,-0.003,90,0.4677,False
+Wskaźniki uprzejmości,C1 wobec C2,Mann-Whitney U,419.5,0.3049,0.068,60,0.4065,False
+Znaki zapytania,C0 / C1 / C2,Kruskal-Wallis,2.51,0.2851,0.006,90,0.4065,False
+Znaki zapytania,C1 wobec C2,Mann-Whitney U,499.0,0.4019,-0.109,60,0.4677,False
+Wskaźniki wrogości,C0 / C1 / C2,Kruskal-Wallis,1.17,0.5582,-0.01,90,0.5876,False
+Wskaźniki wrogości,C1 wobec C2,Mann-Whitney U,459.0,0.875,-0.02,60,0.875,False
